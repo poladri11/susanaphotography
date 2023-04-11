@@ -23,6 +23,24 @@
     <header>
         <div class="header__mobile">
             <div class="header__mobile-overlay">
+                
+                <div class="header__mobile-overlay-head">
+                    <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
+                </div>
+
+
+                <div class="header__mobile-overlay-body">
+                    <a class="header__mobile-overlay-body-a" href="#">Inicio</a>
+                    <a class="header__mobile-overlay-body-a" href="#">Galería</a>
+                    <a class="header__mobile-overlay-body-a" href="#">Clases</a>
+                    <a class="header__mobile-overlay-body-a" href="#">Edición</a>
+                    <a class="header__mobile-overlay-body-a" href="#">Contacto</a>
+                </div>
+
+                <div class="header__mobile-overlay-footer">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Aviso de Cookies</a>
+                </div>
 
             </div>
             <div class="header__mobile-head">
