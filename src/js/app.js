@@ -13,7 +13,10 @@ $(".header__mobile-hmenu").click(function() {
             delay: 550,
             left: "-100%",
             duration: 300,
-            easing: "linear"
+            easing: "linear",
+            complete: function() {
+                document.querySelector(".header__mobile-overlay").style.display = "none"
+            }
         })
         
         anime({

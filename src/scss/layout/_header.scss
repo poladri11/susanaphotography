@@ -5,7 +5,7 @@
     padding: 2rem;
     border-bottom: 1px solid white;
     max-height: 20rem;
-    background-color: #0f0f0e;;
+    background-color: #0f0f0e;
 }
 
 .header__mobile-logo {
@@ -17,6 +17,8 @@
     flex-direction: column;
     gap: .6rem;
     z-index: 9999;
+    border: none;
+    background-color: transparent;
 }
 
 .header__mobile-hmenu-line {
@@ -69,6 +71,10 @@
     display: grid;
     place-items: center;
     flex-basis: 15rem;
+
+    a {
+        border-bottom: none;
+    }
 }
 
 .header__mobile-overlay-body {
@@ -93,4 +99,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+
+@media screen and (min-width: 999px) {
+    .header__mobile {
+        display: none;
+    }
 }

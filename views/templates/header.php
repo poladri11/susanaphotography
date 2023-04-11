@@ -25,12 +25,14 @@
             <div class="header__mobile-overlay">
                 
                 <div class="header__mobile-overlay-head">
-                    <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
+                    <a href="/">
+                        <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
+                    </a>
                 </div>
 
 
                 <div class="header__mobile-overlay-body">
-                    <a class="header__mobile-overlay-body-a" href="#">Inicio</a>
+                    <a class="header__mobile-overlay-body-a" href="/">Inicio</a>
                     <a class="header__mobile-overlay-body-a" href="#">Galería</a>
                     <a class="header__mobile-overlay-body-a" href="#">Clases</a>
                     <a class="header__mobile-overlay-body-a" href="#">Edición</a>
@@ -45,13 +47,15 @@
             </div>
             <div class="header__mobile-head">
 
-                <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
+                <a href="/">
+                    <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
+                </a>
 
-                <div class="header__mobile-hmenu">
+                <button class="header__mobile-hmenu">
                     <div class="header__mobile-hmenu-line line-1"></div>
                     <div class="header__mobile-hmenu-line line-2"></div>
                     <div class="header__mobile-hmenu-line line-3"></div>
-                </div>
+                </button>
             </div>
         </div>
     </header>

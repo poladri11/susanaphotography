@@ -1,9 +1,17 @@
 <footer>
     <div class="footer-socials">
-        <img class="footer-socials-icon" src="/build/img/logo/socials/gmail.svg" alt="Logo de Gmail">
-        <img class="footer-socials-icon" src="/build/img/logo/socials/facebook.svg" alt="Logo de Facebook">
-        <img class="footer-socials-icon" src="/build/img/logo/socials/instagram.svg" alt="Logo de Instagram">
-        <img class="footer-socials-icon" src="/build/img/logo/socials/whatsapp.svg" alt="Logo de WhatsApp">
+        <a href="/">
+            <img class="footer-socials-icon" src="/build/img/logo/socials/gmail.svg" alt="Logo de Gmail">
+        </a>
+        <a href="/">
+            <img class="footer-socials-icon" src="/build/img/logo/socials/facebook.svg" alt="Logo de Facebook">
+        </a>
+        <a href="/">
+            <img class="footer-socials-icon" src="/build/img/logo/socials/instagram.svg" alt="Logo de Instagram">
+        </a>
+        <a href="/">
+            <img class="footer-socials-icon" src="/build/img/logo/socials/whatsapp.svg" alt="Logo de WhatsApp">
+        </a>
     </div>
 
     <div class="footer-avisos">
