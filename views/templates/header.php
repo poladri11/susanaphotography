@@ -32,11 +32,25 @@
 
 
                 <div class="header__mobile-overlay-body">
-                    <a class="header__mobile-overlay-body-a" href="/">Inicio</a>
-                    <a class="header__mobile-overlay-body-a" href="#">Galería</a>
-                    <a class="header__mobile-overlay-body-a" href="#">Clases</a>
-                    <a class="header__mobile-overlay-body-a" href="#">Edición</a>
-                    <a class="header__mobile-overlay-body-a" href="#">Contacto</a>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="header__mobile-overlay-body-a" href="/">Inicio</a>
+                            </li>
+                            <li>
+                                <a class="header__mobile-overlay-body-a" href="#">Galería</a>
+                            </li>
+                            <li>
+                                <a class="header__mobile-overlay-body-a" href="#">Clases</a>
+                            </li>
+                            <li>
+                                <a class="header__mobile-overlay-body-a" href="#">Edición</a>
+                            </li>
+                            <li>
+                                <a class="header__mobile-overlay-body-a" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div class="header__mobile-overlay-footer">
@@ -58,5 +72,36 @@
                 </button>
             </div>
         </div>
+
+        <div class="header__pc">
+            <div class="header__pc-logo">
+                <a href="/">
+                    <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
+                </a>
+            </div>
+
+            <div class="header__pc-nav-div">
+                <nav class="header__pc-nav">
+                    <ul class="header__pc-nav-ul">
+                        <li class="header__pc-nav-li">
+                            <a class="header__pc-nav-a" href="/">Inicio</a>
+                        </li>
+                        <li class="header__pc-nav-li">
+                            <a class="header__pc-nav-a" href="#">Galería</a>
+                        </li>
+                        <li class="header__pc-nav-li">
+                            <a class="header__pc-nav-a" href="#">Clases</a>
+                        </li>
+                        <li class="header__pc-nav-li">
+                            <a class="header__pc-nav-a" href="#">Edición</a>
+                        </li>
+                        <li class="header__pc-nav-li">
+                            <a class="header__pc-nav-a" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
     </header>
     
