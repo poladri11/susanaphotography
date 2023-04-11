@@ -8,6 +8,8 @@ $(".header__mobile-hmenu").click(function() {
     
     if($( this ).hasClass("active")) {
         
+        document.body.style.overflow = "auto";
+
         anime({
             targets: ".header__mobile-overlay",
             delay: 550,
@@ -63,6 +65,8 @@ $(".header__mobile-hmenu").click(function() {
     } else {
 
         document.querySelector(".header__mobile-overlay").style.display = "flex";
+        document.body.style.overflow = "hidden";
+        window.scrollTo(0, 0);
 
         anime({
             targets: ".header__mobile-overlay",

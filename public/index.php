@@ -9,6 +9,8 @@ $router = new Router;
 
 /* Páginas */
 $router->get('/', [PaginasController::class, 'index']);
+$router->get('/galeria', [PaginasController::class, 'galeria']);
+$router->get('/galeria/*', [PaginasController::class, 'galeriaPics']);
 
 
 $router->comprobarRutas(); 

@@ -5,9 +5,14 @@ class Router {
 
     public $rutasGET = [];
     public $rutasPOST = [];
+    public $rutasDinamicasGet = [];
 
     public function get($url, $fn) {
-        $this->rutasGET[$url] = $fn;
+        if(substr($url, -1) == "*") {
+            $this->rutasDinamicasGet[explode("/", $url)[1]] = $fn;
+        } else {
+            $this->rutasGET[$url] = $fn;
+        }
     }
 
     public function post($url, $fn) {
@@ -26,7 +31,13 @@ class Router {
         $metodo = $_SERVER['REQUEST_METHOD'];
 
         if($metodo === 'GET') {
-            $fn = $this->rutasGET[$urlActual] ?? null;
+
+            if(isset($this->rutasDinamicasGet[explode("/", $urlActual)[1]]) != null && strlen(explode("/", $urlActual, 2)[1]) != strlen(explode("/", $urlActual)[1])) {
+                $fn = $this->rutasDinamicasGet[explode("/", $urlActual)[1]] ?? null;
+                
+            } else {
+                $fn = $this->rutasGET[$urlActual] ?? null;
+            }
         } else {
             $fn = $this->rutasPOST[$urlActual] ?? null;
         }
@@ -41,7 +52,7 @@ class Router {
             //La URL existe y hay una función asociada
             call_user_func($fn, $this);
         } else {
-            echo "Página no encontrada";
+            header("Location: /");
         }
     }
     // Muetra una vista

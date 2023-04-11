@@ -38,7 +38,7 @@
                                 <a class="header__mobile-overlay-body-a" href="/">Inicio</a>
                             </li>
                             <li>
-                                <a class="header__mobile-overlay-body-a" href="#">Galería</a>
+                                <a class="header__mobile-overlay-body-a" href="/galeria">Galería</a>
                             </li>
                             <li>
                                 <a class="header__mobile-overlay-body-a" href="#">Clases</a>
@@ -87,7 +87,7 @@
                             <a class="header__pc-nav-a" href="/">Inicio</a>
                         </li>
                         <li class="header__pc-nav-li">
-                            <a class="header__pc-nav-a" href="#">Galería</a>
+                            <a class="header__pc-nav-a" href="/galeria">Galería</a>
                         </li>
                         <li class="header__pc-nav-li">
                             <a class="header__pc-nav-a" href="#">Clases</a>
