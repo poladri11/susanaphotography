@@ -1,42 +1,98 @@
-<main class="main-galeria">
-    <div class="main-galeria-h1">
-        <h1>Galería</h1>        
+<main class="main-galeria-category">
+    <div class="main-galeria-category-head">
+        <h1>Halloween</h1>
+        <a href="/galeria">Volver</a>    
     </div>
 
-    <div class="main-galeria-grid">
+    <div class="main-galeria-category-grid">
 
-        <div class="main-galeria-grid-cat">
-            <h2><a href="#">Niñas</a></h2>
-            <a href="#">
-                <img src="/build/img/bg/Bg-category.jpeg" alt="Foto de categoría niños">
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween1.jpeg" class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
             </a>
         </div>
 
-        <div class="main-galeria-grid-cat">
-            <h2><a href="#">Halloween</a></h2>
-            <a href="#">
-                <img src="/build/img/bg/Bg-image-index4.jpeg" alt="Foto de categoría Halloween">
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween2.jpeg" class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
             </a>
         </div>
 
-        <div class="main-galeria-grid-cat">
-            <h2><a href="#">Exteriores</a></h2>
-            <a href="#">
-                <img src="/build/img/bg/Bg-image-index4.webp" alt="Foto de categoría Exteriores">
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween3.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
             </a>
         </div>
 
-        <div class="main-galeria-grid-cat">
-            <h2><a href="#">Niñas</a></h2>
-            <a href="#">
-                <img src="/build/img/bg/Bg-category.jpeg" alt="Foto de categoría niños">
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween4.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
             </a>
         </div>
 
-        <div class="main-galeria-grid-cat">
-            <h2><a href="#">Halloween</a></h2>
-            <a href="#">
-                <img src="/build/img/bg/Bg-image-index4.jpeg" alt="Foto de categoría Halloween">
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween5.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween1.jpeg" class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween2.jpeg" class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween3.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween4.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween5.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween1.jpeg" class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween2.jpeg" class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween3.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween4.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-category-grid-cat">
+            <a target="_blank" href="/build/img/gallery/halloween/halloween1-fullres.jpeg">
+                <img data-srcset="/build/img/gallery/halloween/halloween5.jpeg"  class="lazy" src="/build/img/gallery/placeholder.png" alt="Foto de categoría Halloween">
             </a>
         </div>
 

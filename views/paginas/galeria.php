@@ -13,8 +13,43 @@
         </div>
 
         <div class="main-galeria-grid-cat">
+            <h2><a href="galeria/halloween">Halloween</a></h2>
+            <a href="galeria/halloween">
+                <img src="/build/img/bg/Bg-image-index4.jpeg" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-grid-cat">
+            <h2><a href="#">Exteriores</a></h2>
+            <a href="#">
+                <img src="/build/img/bg/Bg-image-index4.webp" alt="Foto de categoría Exteriores">
+            </a>
+        </div>
+
+        <div class="main-galeria-grid-cat">
+            <h2><a href="#">Niños</a></h2>
+            <a href="#">
+                <img src="/build/img/bg/Bg-category.jpeg" alt="Foto de categoría niños">
+            </a>
+        </div>
+
+        <div class="main-galeria-grid-cat">
             <h2><a href="#">Halloween</a></h2>
             <a href="#">
+                <img src="/build/img/bg/Bg-image-index4.jpeg" alt="Foto de categoría Halloween">
+            </a>
+        </div>
+
+        <div class="main-galeria-grid-cat">
+            <h2><a href="#">Niños</a></h2>
+            <a href="#">
+                <img src="/build/img/bg/Bg-category.jpeg" alt="Foto de categoría niños">
+            </a>
+        </div>
+
+        <div class="main-galeria-grid-cat">
+            <h2><a href="galeria/halloween">Halloween</a></h2>
+            <a href="galeria/halloween">
                 <img src="/build/img/bg/Bg-image-index4.jpeg" alt="Foto de categoría Halloween">
             </a>
         </div>

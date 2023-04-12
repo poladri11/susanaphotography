@@ -32,7 +32,7 @@ class PaginasController {
         $requestedParam = explode("/", $_SERVER['REQUEST_URI'])[2];
 
         if(in_array($requestedParam, $x)) {
-            var_dump("Hola");
+            
         } else {
             header("Location: /");
         }
