@@ -15,6 +15,7 @@ $router->get('/clases', [PaginasController::class, 'clases']);
 $router->get('/sesion', [PaginasController::class, 'sesion']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/login', [PaginasController::class, 'login']);
+$router->post('/login', [PaginasController::class, 'login']);
 
 
 $router->comprobarRutas(); 

@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use MVC\Router;
-
+use Model\Login;
 
 
 class PaginasController {
@@ -65,6 +65,21 @@ class PaginasController {
     }
 
     public static function login(Router $router) {
+
+        if($_SERVER['REQUEST_METHOD'] === "POST") {
+            $email = $_POST['email'];
+            $pass = $_POST['password'];
+            $exist = Login::userExist($email);
+            if($exist) {
+                
+                $passVerified = Login::passVerify($pass, $email);
+                if($passVerified) {
+                    $_SESSION['auth'] = true;
+                    $_SESSION['email'] = $_POST['email'];
+                    $_SESSION['admin'] = Login::isAdmin($email);
+                }
+            }
+        }
 
         $router->render('paginas/login', [
 
