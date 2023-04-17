@@ -57,4 +57,19 @@ class PaginasController {
         ]);
     }
 
+    public static function contacto(Router $router) {
+
+        $router->render('paginas/contacto', [
+
+        ]);
+    }
+
+    public static function login(Router $router) {
+
+        $router->render('paginas/login', [
+
+        ]);
+    }
+
+
 }

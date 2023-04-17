@@ -51,7 +51,7 @@
                                 <a class="header__mobile-overlay-body-a" href="/sesion">Sesión de fotos</a>
                             </li>
                             <li>
-                                <a class="header__mobile-overlay-body-a" href="#">Contacto</a>
+                                <a class="header__mobile-overlay-body-a" href="/contacto">Contacto</a>
                             </li>
                         </ul>
                     </nav>
@@ -100,7 +100,7 @@
                             <a class="header__pc-nav-a" href="/sesion">Sesión de fotos</a>
                         </li>
                         <li class="header__pc-nav-li">
-                            <a class="header__pc-nav-a" href="#">Contacto</a>
+                            <a class="header__pc-nav-a" href="/contacto">Contacto</a>
                         </li>
                     </ul>
                 </nav>

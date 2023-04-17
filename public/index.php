@@ -13,6 +13,8 @@ $router->get('/galeria', [PaginasController::class, 'galeria']);
 $router->get('/galeria/*', [PaginasController::class, 'galeriaPics']);
 $router->get('/clases', [PaginasController::class, 'clases']);
 $router->get('/sesion', [PaginasController::class, 'sesion']);
+$router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->get('/login', [PaginasController::class, 'login']);
 
 
 $router->comprobarRutas(); 

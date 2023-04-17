@@ -1,0 +1,84 @@
+.main-login {
+    background-color: $bgMain;
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.main-login-form-c {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .main-login-form {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .main-login-form-field {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+
+        input {
+            border: none;
+            padding: 1rem;
+            color: $bgMain;
+            background-color: transparent;
+            border-bottom: 1px solid $bgMain;
+        }
+
+        label {
+            font-weight: bold;
+            color: $bgMain;
+            position: absolute;
+            left: 1rem;
+            bottom: .5rem;
+            transition: all .5s ease;
+        }
+    }
+
+    .main-login-form-a {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+
+        a {
+            color: $bgMain;
+            border-bottom: 1px solid grey;
+            font-weight: bold;
+        }
+    }
+
+    input[type=submit] {
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 1px solid $bgMain;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+}
+
+.main-login-form-field input:focus,
+.main-login-form-field input:focus-visible {
+    outline: none;
+}
+
+.main-login-form-field input:focus ~ label,
+.main-login-form-field input:valid ~ label {
+    font-size: 1.1rem;
+    bottom: 3rem;
+    color: $bgMain;
+} 
