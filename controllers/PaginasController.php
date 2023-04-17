@@ -50,4 +50,11 @@ class PaginasController {
         ]);
     }
 
+    public static function sesion(Router $router) {
+
+        $router->render('paginas/sesion', [
+
+        ]);
+    }
+
 }

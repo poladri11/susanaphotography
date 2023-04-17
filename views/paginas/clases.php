@@ -30,7 +30,7 @@
         
         <div class="main-clases-body-quest">
             <h2>¿Cómo puedes inscribirte en las clases?</h2>
-            <p>Puedes inscribirte tanto a clases particulares, como a las grupales, en tu panel de usuario, haciendo click en Perfil > clases, o haciendo click <a href="#">aquí</a>.</p>
+            <p>Puedes inscribirte tanto a clases particulares, como a las grupales, contactándome por <a href="#">WhatsApp</a>, <a href="#">Facebook</a>, o <a href="#">Instagram</a>.</p>
         </div>
 
     </div>

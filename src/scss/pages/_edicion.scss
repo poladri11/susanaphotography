@@ -1,10 +1,10 @@
-.main-clases {
+.main-sesion {
     flex: 1;
     background-color: $bgMain;
     color: white;
 }
 
-.main-clases-head {
+.main-sesion-head {
     
     h1 {
         text-shadow: -1px 2px rgba(138, 138, 138, 0.288);
@@ -12,7 +12,7 @@
     }
 }
 
-.main-clases-body {
+.main-sesion-body {
 
     width: 90%;
     margin: 0 auto;
@@ -24,12 +24,12 @@
         font-size: 1.8rem;
     }
 
-    p, ul {
+    p {
         font-size: 1.5rem;
     }
 }
 
-.main-clases-body-quest {
+.main-sesion-body-quest {
     margin: 5rem 0;
 
     a {
@@ -38,9 +38,11 @@
     }
 }
 
+
+
 @media screen and (min-width: 800px) {
     
-    .main-clases-body {
+    .main-sesion-body {
 
         h2 {
             font-size: 2.2rem;

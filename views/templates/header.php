@@ -48,7 +48,7 @@
                                 <a class="header__mobile-overlay-body-a" href="/clases">Clases</a>
                             </li>
                             <li>
-                                <a class="header__mobile-overlay-body-a" href="#">Edición</a>
+                                <a class="header__mobile-overlay-body-a" href="/sesion">Sesión de fotos</a>
                             </li>
                             <li>
                                 <a class="header__mobile-overlay-body-a" href="#">Contacto</a>
@@ -97,7 +97,7 @@
                             <a class="header__pc-nav-a" href="/clases">Clases</a>
                         </li>
                         <li class="header__pc-nav-li">
-                            <a class="header__pc-nav-a" href="#">Edición</a>
+                            <a class="header__pc-nav-a" href="/sesion">Sesión de fotos</a>
                         </li>
                         <li class="header__pc-nav-li">
                             <a class="header__pc-nav-a" href="#">Contacto</a>
