@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susana photography</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <?php
+        $requested = $_SERVER['REQUEST_URI'];
+        $requestFirst = ucfirst(explode("/", $requested)[1]);
+        if(isset(explode("/", $requested)[2])) {
+            $requestSecond = ucfirst(explode("/", $requested)[2]);
+        } else { $requestSecond = ""; }
+    ?>
+    <title>Susana photography <?php echo ucfirst($requestFirst) . " " . ucfirst($requestSecond) ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
@@ -41,7 +45,7 @@
                                 <a class="header__mobile-overlay-body-a" href="/galeria">Galería</a>
                             </li>
                             <li>
-                                <a class="header__mobile-overlay-body-a" href="#">Clases</a>
+                                <a class="header__mobile-overlay-body-a" href="/clases">Clases</a>
                             </li>
                             <li>
                                 <a class="header__mobile-overlay-body-a" href="#">Edición</a>
@@ -90,7 +94,7 @@
                             <a class="header__pc-nav-a" href="/galeria">Galería</a>
                         </li>
                         <li class="header__pc-nav-li">
-                            <a class="header__pc-nav-a" href="#">Clases</a>
+                            <a class="header__pc-nav-a" href="/clases">Clases</a>
                         </li>
                         <li class="header__pc-nav-li">
                             <a class="header__pc-nav-a" href="#">Edición</a>

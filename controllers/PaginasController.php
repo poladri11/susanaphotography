@@ -43,4 +43,11 @@ class PaginasController {
 
     }
 
+    public static function clases(Router $router) {
+
+        $router->render('paginas/clases', [
+
+        ]);
+    }
+
 }
