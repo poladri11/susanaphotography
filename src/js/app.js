@@ -123,3 +123,50 @@ $(".header__mobile-hmenu").click(function() {
     $( this ).toggleClass("active");
     
 })
+
+if($(".header__mobile-head-button-perfil").length) {
+    
+    let active = false;
+    $( ".header__mobile-head-button-perfil" ).click(function() {
+
+        if(!active) {
+            anime({
+                targets: ".header__mobile-head-button-perfil-c-a",
+                begin: function() {
+                    $( ".header__mobile-head-button-perfil-c-a" ).each(function(a) {
+                        $( this ).show();
+                    })
+                },
+                opacity: 1,
+                delay: anime.stagger(290),
+                easing: "linear",
+                height: {
+                    targets: ".header__mobile-head-button-perfil-c",
+                    value: "50px",
+                    delay: 0
+                },
+                duration: 500
+            })
+            active = true
+        } else {
+            anime({
+                targets: ".header__mobile-head-button-perfil-c-a",
+                complete: function() {
+                    $( ".header__mobile-head-button-perfil-c-a" ).each(function(a) {
+                        $( this ).hide();
+                    })
+                },
+                opacity: 0,
+                delay: anime.stagger(20),
+                easing: "linear",
+                height: {
+                    targets: ".header__mobile-head-button-perfil-c",
+                    value: "0px",
+                    delay: 0
+                },
+                duration: 200
+            })
+            active = false
+        }
+    });
+}

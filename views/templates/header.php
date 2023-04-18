@@ -29,6 +29,18 @@
             <div class="header__mobile-overlay">
                 
                 <div class="header__mobile-overlay-head">
+                    <!-- <?php if($_SESSION['auth']) { ?>
+                        <button class="header__mobile-overlay-head-button">
+                            <img src="/build/img/svgs/user.svg" alt="Icono de usuario">
+                        </button>
+                        <div class="header__mobile-overlay-head-o-u">
+                            <a class="header__mobile-overlay-head-o-u-a" href="#">Perfil</a>
+                            <?php if($_SESSION['admin'] === true) { ?>
+                                <a class="header__mobile-overlay-head-o-u-a" href="#">Panel de admin</a>
+                            <?php } ?>
+                            <a class="header__mobile-overlay-head-o-u-a" href="/logout">Cerrar sesión</a>
+                        </div>
+                    <?php } ?> -->
                     <a href="/">
                         <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
                     </a>
@@ -69,11 +81,27 @@
                     <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
                 </a>
 
-                <button class="header__mobile-hmenu">
-                    <div class="header__mobile-hmenu-line line-1"></div>
-                    <div class="header__mobile-hmenu-line line-2"></div>
-                    <div class="header__mobile-hmenu-line line-3"></div>
-                </button>
+                <div class="header__mobile-head-contenedor-botones">
+                    <?php if($_SESSION['auth']) { ?>
+                        <div class="header__mobile-head-perfil-cont">
+                            <button class="header__mobile-head-button-perfil">
+                                <img src="/build/img/svgs/user.svg" alt="Icono de usuario">
+                            </button>
+                            <div class="header__mobile-head-button-perfil-c">
+                                <a class="header__mobile-head-button-perfil-c-a" href="#">Perfil</a>
+                                <?php if($_SESSION['admin'] === true) { ?>
+                                    <a class="header__mobile-head-button-perfil-c-a" href="#">Panel de admin</a>
+                                <?php } ?>
+                                <a class="header__mobile-head-button-perfil-c-a" href="/logout">Cerrar sesión</a>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <button class="header__mobile-hmenu">
+                        <div class="header__mobile-hmenu-line line-1"></div>
+                        <div class="header__mobile-hmenu-line line-2"></div>
+                        <div class="header__mobile-hmenu-line line-3"></div>
+                    </button>
+                </div>
             </div>
         </div>
 

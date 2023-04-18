@@ -10,7 +10,6 @@ class PaginasController {
 
     public static function index(Router $router) {
 
-
         $router->render('paginas/index', [
             
         ]);
@@ -66,6 +65,10 @@ class PaginasController {
 
     public static function login(Router $router) {
 
+        if($_SESSION['auth']) {
+            header("Location: /");
+        }
+
         if($_SERVER['REQUEST_METHOD'] === "POST") {
             $email = $_POST['email'];
             $pass = $_POST['password'];
@@ -77,6 +80,7 @@ class PaginasController {
                     $_SESSION['auth'] = true;
                     $_SESSION['email'] = $_POST['email'];
                     $_SESSION['admin'] = Login::isAdmin($email);
+                    header("Location: /");
                 }
             }
         }
@@ -84,6 +88,13 @@ class PaginasController {
         $router->render('paginas/login', [
 
         ]);
+    }
+
+    public static function logout(Router $router) {
+
+        $_SESSION = [];
+
+        header("Location: /");
     }
 
 

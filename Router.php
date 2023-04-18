@@ -22,6 +22,8 @@ class Router {
     public function comprobarRutas() {
         session_start();
         $auth = $_SESSION['auth'] ?? null;
+        $_SESSION['auth'] = $_SESSION['auth'] ?? null;
+        $_SESSION['admin'] = $_SESSION['admin'] ?? null;
 
 
         // Array de rutas protegidas
