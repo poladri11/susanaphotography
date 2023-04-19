@@ -27,7 +27,7 @@ class Router {
 
 
         // Array de rutas protegidas
-        $rutas_protegidas = [];
+        $rutas_protegidas = ['/admin'];
 
         $urlActual = $_SERVER['PATH_INFO'] ?? '/';
         $metodo = $_SERVER['REQUEST_METHOD'];

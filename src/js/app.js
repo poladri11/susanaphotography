@@ -127,43 +127,54 @@ $(".header__mobile-hmenu").click(function() {
 if($(".header__mobile-head-button-perfil").length) {
     
     let active = false;
+    let running = false;
     $( ".header__mobile-head-button-perfil" ).click(function() {
+
+        if(running) { return }
 
         if(!active) {
             anime({
+                targets: ".header__mobile-head-button-perfil-c",
+                height: "120px",
+            })
+            anime({
                 targets: ".header__mobile-head-button-perfil-c-a",
                 begin: function() {
+                    running = true;
                     $( ".header__mobile-head-button-perfil-c-a" ).each(function(a) {
                         $( this ).show();
                     })
                 },
                 opacity: 1,
-                delay: anime.stagger(290),
+                delay: anime.stagger(100),
                 easing: "linear",
-                height: {
-                    targets: ".header__mobile-head-button-perfil-c",
-                    value: "50px",
-                    delay: 0
-                },
-                duration: 500
+                duration: 400,
+                complete: function() {
+                    running = false;
+                }
             })
             active = true
         } else {
             anime({
+                targets: ".header__mobile-head-button-perfil-c",
+                height: "0px",
+                delay: 500
+            })
+            anime({
                 targets: ".header__mobile-head-button-perfil-c-a",
+                begin: function() {
+                    running = true;
+                },
                 complete: function() {
+                    running = false;
                     $( ".header__mobile-head-button-perfil-c-a" ).each(function(a) {
                         $( this ).hide();
                     })
                 },
                 opacity: 0,
-                delay: anime.stagger(20),
+                delay: anime.stagger(100, {direction: 'reverse'}),
                 easing: "linear",
-                height: {
-                    targets: ".header__mobile-head-button-perfil-c",
-                    value: "0px",
-                    delay: 0
-                },
+
                 duration: 200
             })
             active = false

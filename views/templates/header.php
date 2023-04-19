@@ -90,7 +90,7 @@
                             <div class="header__mobile-head-button-perfil-c">
                                 <a class="header__mobile-head-button-perfil-c-a" href="#">Perfil</a>
                                 <?php if($_SESSION['admin'] === true) { ?>
-                                    <a class="header__mobile-head-button-perfil-c-a" href="#">Panel de admin</a>
+                                    <a class="header__mobile-head-button-perfil-c-a" href="/admin">Panel de admin</a>
                                 <?php } ?>
                                 <a class="header__mobile-head-button-perfil-c-a" href="/logout">Cerrar sesión</a>
                             </div>
@@ -110,6 +110,7 @@
                 <a href="/">
                     <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
                 </a>
+                
             </div>
 
             <div class="header__pc-nav-div">
@@ -132,6 +133,20 @@
                         </li>
                     </ul>
                 </nav>
+                <?php if($_SESSION['auth']) { ?>
+                        <div class="header__mobile-head-perfil-cont">
+                            <button class="header__mobile-head-button-perfil">
+                                <img src="/build/img/svgs/user.svg" alt="Icono de usuario">
+                            </button>
+                            <div class="header__mobile-head-button-perfil-c">
+                                <a class="header__mobile-head-button-perfil-c-a" href="#">Perfil</a>
+                                <?php if($_SESSION['admin'] === true) { ?>
+                                    <a class="header__mobile-head-button-perfil-c-a" href="/admin">Panel de admin</a>
+                                <?php } ?>
+                                <a class="header__mobile-head-button-perfil-c-a" href="/logout">Cerrar sesión</a>
+                            </div>
+                        </div>
+                    <?php } ?>
             </div>
         </div>
 

@@ -111,6 +111,9 @@
     height: 4rem;
     border: none;
     border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+    }
     img {
         height: 100%;
     }
@@ -120,10 +123,11 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0rem 4rem;
     position: absolute;
     background: #0f0f0e;
     width: max-content;
+    justify-content: center;
     top: 7rem;
 
     a {
@@ -131,7 +135,6 @@
         display: none;
         opacity: 0;
         font-size: 1.9rem;
-        text-align: center;
     }
 }
 
@@ -182,10 +185,10 @@
     }
 
     .header__pc-nav-div {
-        display: grid;
-        place-items: center;
-
+        display: flex;
         width: 75%;
+        align-items: center;
+        margin-right: 5rem;
     }
 
     .header__pc-nav {

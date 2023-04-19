@@ -3,6 +3,7 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\PaginasController;
+use Controllers\AdminController;
 
 $router = new Router;
 
@@ -18,6 +19,7 @@ $router->get('/login', [PaginasController::class, 'login']);
 $router->post('/login', [PaginasController::class, 'login']);
 $router->get('/logout', [PaginasController::class, 'logout']);
 
-
+/* Admin */
+$router->get('/admin', [AdminController::class, 'index']);
 
 $router->comprobarRutas(); 

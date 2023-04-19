@@ -1,0 +1,49 @@
+.main__admin {
+    flex: 1;
+    background-color: $bgMain;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__admin-head {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main__admin-body {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    a, h2 {
+        color: white;
+    }
+
+}
+
+.main__admin-body-a {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+
+    a {
+        border-radius: 15px;
+        margin: 0;
+        text-align: center;
+        background-color: #0f0f0e;
+        border: 1px solid rgb(196, 193, 193);
+        padding: 1.5rem;
+        letter-spacing: 3px;
+    }
+}
