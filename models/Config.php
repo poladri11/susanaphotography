@@ -12,14 +12,23 @@ class Config {
         self::$db = $db;
     }
 
-    public static function queryDB($query) {
-       
+    public static function queryDB($query, $multiple = false) {
+        
         $response = self::$db->prepare($query);
         $response->execute();
-        $data = $response->fetch(self::$db::FETCH_ASSOC);
+        if($response->columnCount() <= 0) {
+            return $response;
+        }
+        if($multiple) {
+            $data = $response->fetchAll();
 
+        } else {
+
+            $data = $response->fetch(self::$db::FETCH_ASSOC);
+        }
         return $data;
     }
+
 }
 
 

@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Users;
+use Model\Galeria;
 
 
 class PaginasController {
@@ -18,9 +19,10 @@ class PaginasController {
 
     public static function galeria(Router $router) {
 
+        $cats = Galeria::getAll();
 
         $router->render('paginas/galeria', [
-            
+            'cats'=>$cats
         ]);
 
     }

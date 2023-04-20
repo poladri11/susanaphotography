@@ -1,0 +1,139 @@
+.main__admin-g-add {
+    flex: 1;
+    background-color: $bgMain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main__admin-g-add-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    
+    a, h1 {
+        color: white;
+    }
+
+    a {
+        padding: 1rem;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+}
+
+.main__admin-g-add-body {
+    height: 40rem;
+    margin-bottom: 5rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.form__add-c {
+    height: 100%;
+    margin: 0 auto;
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 3rem;
+        border-radius: 10px;
+
+        input[type=file] {
+            font-size: 1.2rem;
+            color: white;
+            width: 100%;
+        }
+
+        input[type=submit] {
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 15px;
+            border: 1px solid rgb(255, 255, 255);
+            font-weight: bold;
+            background-color: #0f0f0e;
+            color: white;
+            align-self: flex-end;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        label {
+            color: white;
+        }
+    }
+
+    legend {
+        color: white;
+    }
+
+}
+
+@media screen and (min-width: 310px) {
+    .form__add-c {
+        fieldset {
+            padding: 5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .main__admin-g-add-body {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .main__admin-g-add-body {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .main__admin-g-add-body {
+        width: 40%;
+    }
+}
+
+.form__add-c-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    input {
+        background-color: transparent;
+        border: none;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid white;
+        color: white;
+        width: 100%;
+    }
+    label {
+        left: 0rem;
+        bottom: 0;
+        position: absolute;
+        transition: all .25s ease;
+    }
+}
+
+.form__add-c-field-file {
+    label {
+        bottom: 3.5rem;
+    }
+}
+
+.form__add-c-field input:focus,
+.form__add-c-field input:focus-visible {
+    outline: none;
+}
+
+.form__add-c-field input:focus ~ label,
+.form__add-c-field input:valid ~ label {
+    font-size: 1.2rem;
+    bottom: 3.5rem;
+} 

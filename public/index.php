@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/app.php';
 use MVC\Router;
 use Controllers\PaginasController;
 use Controllers\AdminController;
+use Controllers\GaleriaController;
 
 $router = new Router;
 
@@ -21,6 +22,10 @@ $router->get('/logout', [PaginasController::class, 'logout']);
 
 /* Admin */
 $router->get('/admin', [AdminController::class, 'index']);
-$router->get('/admin/galeria', [AdminController::class, 'galeria']);
+
+/* Admin Galeria */
+$router->get('/admin/galeria', [GaleriaController::class, 'index']);
+$router->get('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
+$router->post('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
 
 $router->comprobarRutas(); 
