@@ -60,7 +60,7 @@ class Galeria extends Config {
     public static function createDir($nameSani) {
         
         $directoryName = $nameSani . "_" . uniqid();
-        $pathToDir = "galeria/" . $directoryName;
+        $pathToDir = "galeriaPics/" . $directoryName;
         
         if(!file_exists($pathToDir)) {
             mkdir($pathToDir, 0777, true);

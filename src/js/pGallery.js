@@ -1,3 +1,12 @@
+if(window.location.pathname.includes("/galeria")) {
+
+    $(".galeria-frontimg").each(function(data, img) {
+
+        img.src = img.dataset.imgloaded;
+        img.dataset.imgloaded = '';
+    })
+}
+
 if(window.location.pathname.includes("galeria/")) {
     document.addEventListener("DOMContentLoaded", function() {
         const lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
