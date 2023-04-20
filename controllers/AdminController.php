@@ -14,6 +14,14 @@ class AdminController {
         ]);
 
     }
+
+    public static function galeria(Router $router) {
+
+        $router->render('admin/galeria', [
+            
+        ]);
+
+    }
 }
 
 ?>

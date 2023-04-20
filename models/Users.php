@@ -4,7 +4,7 @@ namespace Model;
 
 include '../includes/app.php';
 
-class Login extends Config {
+class Users extends Config {
 
     public static function hashPass($pass) {
         return password_hash($pass, PASSWORD_DEFAULT);
@@ -13,9 +13,8 @@ class Login extends Config {
     public static function userExist($email) {
 
         $query = "SELECT * from users WHERE email = '$email' LIMIT 1";
-        $response = self::$db->prepare($query);
-        $response->execute();
-        $data = $response->fetch(self::$db::FETCH_ASSOC);
+        $data = self::queryDB($query);
+        
         if(isset($data['email'])) {
             return true;
         } else { return false; }
@@ -29,9 +28,15 @@ class Login extends Config {
     public static function get($email) {
 
         $query = "SELECT * FROM users WHERE email = '$email'";
-        $response = self::$db->prepare($query);
-        $response->execute();
-        $data = $response->fetch(self::$db::FETCH_ASSOC);
+        $data = self::queryDB($query);
+
+        return $data;
+    }
+
+    public static function getAll() {
+
+        $query = "SELECT * FROM users";
+        $data = self::queryDB($query);
 
         return $data;
     }

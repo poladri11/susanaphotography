@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use MVC\Router;
-use Model\Login;
+use Model\Users;
 
 
 class PaginasController {
@@ -72,14 +72,14 @@ class PaginasController {
         if($_SERVER['REQUEST_METHOD'] === "POST") {
             $email = $_POST['email'];
             $pass = $_POST['password'];
-            $exist = Login::userExist($email);
+            $exist = Users::userExist($email);
             if($exist) {
                 
-                $passVerified = Login::passVerify($pass, $email);
+                $passVerified = Users::passVerify($pass, $email);
                 if($passVerified) {
                     $_SESSION['auth'] = true;
                     $_SESSION['email'] = $_POST['email'];
-                    $_SESSION['admin'] = Login::isAdmin($email);
+                    $_SESSION['admin'] = Users::isAdmin($email);
                     header("Location: /");
                 }
             }

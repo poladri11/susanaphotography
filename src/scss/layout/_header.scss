@@ -13,7 +13,15 @@
 }
 
 .header__mobile-logo {
-    width: 150px;
+    width: 100px;
+}
+
+@media screen and (min-width: 310px) {
+    
+    
+    .header__mobile-logo {
+        width: 150px;
+    }
 }
 
 .header__mobile-hmenu {
@@ -99,10 +107,15 @@
 
 .header__mobile-head-perfil-cont {
     position: relative;
-    width: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (min-width: 310px) {
+    .header__mobile-head-perfil-cont {
+        width: 10rem;
+    }
 }
 
 

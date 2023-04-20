@@ -11,6 +11,15 @@ class Config {
     public static function setDB($db) {
         self::$db = $db;
     }
+
+    public static function queryDB($query) {
+       
+        $response = self::$db->prepare($query);
+        $response->execute();
+        $data = $response->fetch(self::$db::FETCH_ASSOC);
+
+        return $data;
+    }
 }
 
 

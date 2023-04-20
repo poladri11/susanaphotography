@@ -21,5 +21,6 @@ $router->get('/logout', [PaginasController::class, 'logout']);
 
 /* Admin */
 $router->get('/admin', [AdminController::class, 'index']);
+$router->get('/admin/galeria', [AdminController::class, 'galeria']);
 
 $router->comprobarRutas(); 

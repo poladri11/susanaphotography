@@ -6,7 +6,7 @@
         <h2>¿Qué quieres administrar?</h2>
         <div class="main__admin-body-a">
 
-            <a href="#">Galería</a>
+            <a href="/admin/galeria">Galería</a>
             <a href="#">Clases</a>
         </div>
     </div>
