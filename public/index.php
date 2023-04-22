@@ -28,4 +28,4 @@ $router->get('/admin/galeria', [GaleriaController::class, 'index']);
 $router->get('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
 $router->post('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
 
-$router->comprobarRutas(); 
+$router->comprobarRutas();

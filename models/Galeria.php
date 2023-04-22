@@ -91,7 +91,6 @@ class Galeria extends Config {
     protected static function queryAddCat($name, $pathFotoPrinc) {
         $query = "INSERT INTO categoria (name, imagenPrinc) VALUES ('$name', '$pathFotoPrinc')";
         $response = self::queryDB($query);
-        var_dump($response);
         if($response) {
             return true;
         } else {
