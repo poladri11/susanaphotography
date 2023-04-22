@@ -31,4 +31,25 @@ class GaleriaController {
         ]);
 
     }
+
+    public static function editGaleria(Router $router) {
+
+        $id = intval($_GET['id']) ?? 0;
+        $galeriaDats = Galeria::get($id);
+        $fotosCat = Galeria::getImages($id);
+        
+        if($_SERVER['REQUEST_METHOD'] === "POST") {
+
+            echo "<pre>";
+            var_dump($_POST);
+            // var_dump($_FILES);
+            echo "</pre>";
+            exit;
+        }
+
+        $router->render('admin/galeria/edit', [
+            'galeriaDats'=>$galeriaDats,
+            'fotosCat'=>$fotosCat
+        ]);
+    }
 }

@@ -21,7 +21,7 @@
 
                 
 
-                <input type="submit" value="Añadir">
+                <input class="add-cat" type="submit" value="Añadir">
 
             </fieldset>
         </form>

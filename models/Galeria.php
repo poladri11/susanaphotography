@@ -24,6 +24,20 @@ class Galeria extends Config {
         return $response;
     }
     
+    public static function get($id) {
+        $query = "SELECT * FROM categoria WHERE id = '$id'";
+        $response = self::queryDB($query);
+        return $response;
+    }
+    
+    public static function getImages($id) {
+        $query = "SELECT * FROM fotos WHERE categoriaId = '$id'";
+        $response = self::queryDB($query, true);
+        return $response;
+    }
+
+    
+    
     public static function isEmptyName($post, $files) {
         $name = $post['name'] ?? '';
         if(empty($name) || (strlen(trim($name)) == 0)) {
