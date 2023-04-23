@@ -29,5 +29,6 @@ $router->get('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
 $router->post('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
 $router->get('/admin/galeria/edit', [GaleriaController::class, 'editGaleria']);
 $router->post('/admin/galeria/edit', [GaleriaController::class, 'editGaleria']);
+$router->get('/admin/galeria/remove', [GaleriaController::class, 'removeGaleria']);
 
 $router->comprobarRutas();

@@ -102,6 +102,112 @@ class Galeria extends Config {
         }
     }
 
+    public static function updateCat($newName, $newPic, $oldName, $catId, $pathOldImage) {
+        $updatedImg = true;
+        $response = true;
+        if($newPic['name'] !== '') {
+            $updatedImg = self::updateCatImg($newPic, $pathOldImage);
+        }
+        if($newName !== $oldName) {
+            $query = "UPDATE categoria SET name = '$newName' WHERE id = $catId;";
+            $response = self::queryDB($query);
+        }
+
+        if($updatedImg && $response) {
+            return true;
+        } else { return false; }
+    }
+
+    public static function addPics($imagesList, $catId, $pathToCat) {
+        
+
+        if($imagesList['name'][0]  === '') { return true; }
+
+        $pathPics = "/galeriaPics/"  . explode("/", $pathToCat)[2];
+
+        $images = self::converToWebp($imagesList, true);
+        $query = "INSERT INTO fotos (categoriaId, pathFoto, pathFotoFullres) VALUES";
+        
+        foreach($images as $image) {
+            $uniqId = uniqid("_");
+            $nameFullres = "/fullRes" . $uniqId . ".webp";
+            $nameLowRes = "/lowRes" . $uniqId  . ".webp";
+            
+            $query .= ' ( ' . $catId .', ';
+            $query .= '"' . $pathPics . $nameLowRes . '"' . ', ';
+            $query .= '"' .$pathPics . $nameFullres . '"' . ' ';
+            $query .= ') , ';
+            
+        
+            imagewebp($image, __DIR__ . '/../public' . $pathPics . $nameFullres, 100);
+            imagewebp($image, __DIR__ . '/../public' . $pathPics . $nameLowRes, 50);
+            
+        }
+        $query = substr($query, 0, -2);
+        $query .= ";";
+        $response = self::queryDB($query);
+        
+    }
+    
+    public static function removePics($imagesList) {
+
+        if($imagesList === null) { return true; }
+
+
+        $listaImg = implode("','", $imagesList);
+        $query = "DELETE FROM fotos WHERE pathFoto IN ('". $listaImg ."'); ";
+        
+        
+        foreach($imagesList as $image) {
+            
+            $nameFullres = str_replace("lowRes", "fullRes", $image);
+            unlink(__DIR__ . '/../public' . $image);
+            unlink(__DIR__ . '/../public' . $nameFullres);
+            
+        }
+
+        $response = self::queryDB($query);
+
+        return $response;
+    }
+
+    public static function removeGal($datosGal) {
+
+        $id = $datosGal['id'];
+        $query = "DELETE FROM fotos WHERE id = $id";
+        $response = self::queryDB($query);
+        $query = "DELETE FROM categoria WHERE id = $id";
+        $response = self::queryDB($query);
+
+        $path = explode("/", $datosGal['imagenPrinc']);
+        $path = "galeriaPics/" . $path[2];
+
+        $files = glob(__DIR__ . "/../public/" . $path . "/*");
+        foreach($files as $file) {
+            if(is_file($file)) {
+                unlink($file);
+            }
+        }
+
+        rmdir(__DIR__ . "/../public/" . $path);
+
+        header("Location: /admin/galeria");
+        
+    }
+
+    public static function updateCatImg($image, $pathOldImage) {
+        $imagenWebp = self::converToWebp($image);
+        $imagenFinal = imagewebp($imagenWebp, __DIR__ . '/../public/' . $pathOldImage, 50);
+        
+        if($imagenFinal) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
     protected static function queryAddCat($name, $pathFotoPrinc) {
         $query = "INSERT INTO categoria (name, imagenPrinc) VALUES ('$name', '$pathFotoPrinc')";
         $response = self::queryDB($query);

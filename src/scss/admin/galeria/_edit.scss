@@ -50,6 +50,9 @@
 
 .main__edit-gal-head-imgPrin {
     display: flex;
+    border: 1px solid hsla(0,0%,100%,.329);
+    padding: 2rem;
+    border-radius: 25px;
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
@@ -68,6 +71,12 @@
     }
 }
 
+.main__edit-gal-head-acont {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .main__edit-gal-head-input {
 
     label {
@@ -80,6 +89,9 @@
     width: 90%;
     margin: 5rem auto;
     display: flex;
+    border: 1px solid #ffffff54;
+    padding: 2rem;
+    border-radius: 25px;
     flex-direction: column;
     gap: 4rem;
 

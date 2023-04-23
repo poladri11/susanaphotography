@@ -45,11 +45,11 @@ if(window.location.pathname.includes("galeria/edit")) {
 
     $(" .main__edit-gal-head-img ").click(function(e) {
         const inputEdit = $(".main__edit-gal-head-input");
-        if(inputEdit.prop("disabled")) {
-            inputEdit.prop("disabled", false);
+        if(inputEdit.prop("readOnly")) {
+            inputEdit.prop("readOnly", false);
             e.target.src = "/build/img/svgs/check.svg";
         } else {
-            inputEdit.prop("disabled", true);
+            inputEdit.prop("readOnly", true);
             e.target.src = "/build/img/svgs/edit1.svg";
         }
     });
