@@ -238,6 +238,7 @@ class Galeria extends Config {
                 
                 $extension = pathinfo($fotoPath, PATHINFO_EXTENSION);
                 if ($extension == 'jpeg' || $extension == 'jpg') {
+
                     $image = imagecreatefromjpeg($aConvertir['tmp_name'][$index]);
 
                     
