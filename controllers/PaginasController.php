@@ -20,26 +20,34 @@ class PaginasController {
     public static function galeria(Router $router) {
 
         $cats = Galeria::getAll();
-
         $router->render('paginas/galeria', [
             'cats'=>$cats
         ]);
-
+        
     }
-
+    
     public static function galeriaPics(Router $router) {
-
-        $x = ["halloween", "kids"];
+        $cats = Galeria::getAll();
         $requestedParam = explode("/", $_SERVER['REQUEST_URI'])[2];
+        $x = [];
+        $currentCat = '';
+        foreach($cats as $cat) {
+            array_push($x ,$cat['name']);
+            if($cat['name'] === $requestedParam) {
+                $currentCat = $cat;
+            }
+        }
 
         if(in_array($requestedParam, $x)) {
             
         } else {
             header("Location: /");
         }
-
+        $pics = Galeria::getAllPics($currentCat['id']);
+        
         $router->render('paginas/galeriaPics', [
-            
+            'pics'=>$pics,
+            'currentCat'=>$currentCat
         ]);
 
     }

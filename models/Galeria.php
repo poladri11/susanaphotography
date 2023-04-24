@@ -218,6 +218,12 @@ class Galeria extends Config {
         }
     }
 
+    public static function getAllPics($catId) {
+        $query = "SELECT * FROM fotos WHERE categoriaId = $catId";
+        $response = self::queryDB($query, true);
+        return $response;
+    }
+
     public static function converToWebp($aConvertir, $lista = false) {
 
         if (!$lista) {
