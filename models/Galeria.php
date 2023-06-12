@@ -2,6 +2,8 @@
 
 namespace Model;
 
+
+
 include '../includes/app.php';
 
 class Galeria extends Config {
@@ -35,11 +37,9 @@ class Galeria extends Config {
         $response = self::queryDB($query, true);
         return $response;
     }
-
-    
-    
+   
     public static function isEmptyName($post, $files) {
-        $name = $post['name'] ?? '';
+        $name = str_replace(" ", "_", $post['name']) ?? '';
         if(empty($name) || (strlen(trim($name)) == 0)) {
             return false;
         } else {
