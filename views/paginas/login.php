@@ -3,7 +3,7 @@
         <form class="main-login-form" method="post">
     
             <div class="main-login-form-field">
-                <input type="text" name="email" id="email" required>
+                <input autocomplete="off" type="text" name="email" id="email" required>
                 <label for="email">Email</label>
             </div>
     

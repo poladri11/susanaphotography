@@ -71,8 +71,8 @@
                 </div>
 
                 <div class="header__mobile-overlay-footer">
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Aviso de Cookies</a>
+                    <a href="#" style="display: none;">Aviso Legal</a>
+                    <a href="/cookies">Aviso de Cookies</a>
                 </div>
 
             </div>

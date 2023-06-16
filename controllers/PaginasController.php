@@ -107,5 +107,11 @@ class PaginasController {
         header("Location: /");
     }
 
+    public static function cookies(Router $router) {
+
+
+        $router->render('paginas/cookies');
+    }
+
 
 }

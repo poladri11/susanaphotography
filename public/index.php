@@ -19,6 +19,7 @@ $router->get('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/login', [PaginasController::class, 'login']);
 $router->post('/login', [PaginasController::class, 'login']);
 $router->get('/logout', [PaginasController::class, 'logout']);
+$router->get('/cookies', [PaginasController::class, 'cookies']);
 
 /* Admin */
 $router->get('/admin', [AdminController::class, 'index']);

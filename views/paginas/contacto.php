@@ -10,22 +10,22 @@
             <p>Puedes contactarme a través de las siguientes plataformas: </p>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="https://wa.me/34727767251">
                         WhatsApp
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/susanyanire35">
                         Facebook
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://instagram.com/susanagutierrezfotografia">
                         Instagram
                     </a>
                 </li>
                     <li>
-                        <a href="#">
+                        <a href="mailto:Susanagutierrezphotography@gmail.com">
                         Email
                     </a>
                 </li>

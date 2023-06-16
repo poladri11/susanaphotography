@@ -1,0 +1,19 @@
+.cookies {
+    background-color: $bgMain;
+    color: white;
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        color: rgba(214, 213, 209, 0.626);
+        border-bottom: 1px solid grey;
+        width: fit-content;
+    }
+
+    .part {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

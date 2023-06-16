@@ -1,21 +1,22 @@
 <footer>
     <div class="footer-socials">
-        <a href="/">
+        <a href="mailto:Susanagutierrezphotography@gmail.com">
             <img class="footer-socials-icon" src="/build/img/logo/socials/gmail.svg" alt="Logo de Gmail">
         </a>
-        <a href="/">
+        <a href="https://www.facebook.com/susanyanire35">
             <img class="footer-socials-icon" src="/build/img/logo/socials/facebook.svg" alt="Logo de Facebook">
         </a>
-        <a href="/">
+        <a href="https://instagram.com/susanagutierrezfotografia">
             <img class="footer-socials-icon" src="/build/img/logo/socials/instagram.svg" alt="Logo de Instagram">
         </a>
-        <a href="/">
+        <a href="https://wa.me/34727767251">
             <img class="footer-socials-icon" src="/build/img/logo/socials/whatsapp.svg" alt="Logo de WhatsApp">
         </a>
     </div>
 
     <div class="footer-avisos">
-        <a href="/avisolegal">Aviso Legal</a><a href="/cookies">Política de Cookies</a>
+        <a style="display: none;" href="/avisolegal">Aviso Legal</a>
+        <a href="/cookies">Política de Cookies</a>
     </div>
 </footer>
 
