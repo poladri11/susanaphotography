@@ -14,12 +14,12 @@
     <title>Susana photography <?php echo ucfirst($requestFirst) . " " . ucfirst($requestSecond) ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="/build/img/logo/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/build/img/logo/logo-negro.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="preload" href="/build/css/app.css" as="style">
     <link rel="stylesheet" href="/build/css/app.css">
+    <meta name="description" content="Bienvenido a la página oficial de Susana Gutiérrez, una talentosa fotógrafa apasionada por capturar momentos únicos y emociones a través de su lente. Explora su portfolio y sumérgete en un mundo visual lleno de belleza, creatividad y sensibilidad. Descubre su enfoque artístico y su habilidad para transmitir historias con cada fotografía. Desde retratos íntimos hasta paisajes impresionantes, Susana te invita a ver el mundo a través de sus ojos y experimentar la magia de la fotografía. Únete a su comunidad de amantes de la imagen y déjate inspirar por su trabajo excepcional. ¡No te pierdas la oportunidad de explorar el arte visual de Susana Gutiérrez y dejarte cautivar por su visión única!">
 
-    <!-- <link rel="shortcut icon" href="/build/img/logo/favico.ico" type="image/x-icon"> -->
 
 </head>
 <body>
@@ -30,18 +30,6 @@
             <div class="header__mobile-overlay">
                 
                 <div class="header__mobile-overlay-head">
-                    <!-- <?php if($_SESSION['auth']) { ?>
-                        <button class="header__mobile-overlay-head-button">
-                            <img src="/build/img/svgs/user.svg" alt="Icono de usuario">
-                        </button>
-                        <div class="header__mobile-overlay-head-o-u">
-                            <a class="header__mobile-overlay-head-o-u-a" href="#">Perfil</a>
-                            <?php if($_SESSION['admin'] === true) { ?>
-                                <a class="header__mobile-overlay-head-o-u-a" href="#">Panel de admin</a>
-                            <?php } ?>
-                            <a class="header__mobile-overlay-head-o-u-a" href="/logout">Cerrar sesión</a>
-                        </div>
-                    <?php } ?> -->
                     <a href="/">
                         <img class="header__mobile-logo" src="/build/img/logo/logo1.png" alt="Logo de SusanaPhotography">
                     </a>

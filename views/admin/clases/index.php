@@ -11,7 +11,7 @@
                 <div class="clase-info">
                     <div class="clase-info-head">
                         <h2> <?php echo $clase['nombre']?> </h2>
-                        <a href="#">Eliminar</a>
+                        <a href="/admin/clases/remove?id=<?php echo $clase['id'] ?>">Eliminar</a>
                     </div>
                     <div class="clase-horario">
                         <p>Inicio: <span style="color: #8eff87; display: block;"><?php $clase['fechaInicio'] = date("d-m-Y H:i:s", strtotime($clase['fechaInicio'])); echo str_replace(" ", "\n", $clase['fechaInicio']) ?> </span> </p>

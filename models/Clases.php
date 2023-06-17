@@ -117,4 +117,26 @@ class Clases extends Config {
         }
     }
 
+    public static function removeClase($id) {
+        $query = "SELECT fotoInicial FROM clasesdisponibles WHERE id = $id";
+
+        $clase = self::queryDB($query);
+        $path = explode('/', $clase['fotoInicial'])[2];
+
+        $files = glob(__DIR__ . "/../public/clasesPics/" . $path . "/*");
+        foreach($files as $file) {
+            if(is_file($file)) {
+                var_dump($file);
+                unlink($file);
+            }
+        }
+
+        rmdir(__DIR__ . "/../public/clasesPics/" . $path);
+
+        $queryDelete = "DELETE FROM clasesdisponibles WHERE id = $id";
+        $deleted = self::queryDB($queryDelete);
+
+        header("Location: /admin/clases");
+    }
+
 }

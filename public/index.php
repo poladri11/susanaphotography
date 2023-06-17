@@ -37,6 +37,7 @@ $router->get('/admin/galeria/remove', [GaleriaController::class, 'removeGaleria'
 $router->get('/admin/clases', [ClasesController::class, 'index']);
 $router->get('/admin/clases/add', [ClasesController::class, 'addClase']);
 $router->post('/admin/clases/add', [ClasesController::class, 'addClase']);
+$router->get('/admin/clases/remove', [ClasesController::class, 'removeClase']);
 
 
 $router->comprobarRutas();

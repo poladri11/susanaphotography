@@ -27,6 +27,97 @@
     p, ul {
         font-size: 1.5rem;
     }
+
+    .clases {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        justify-content: center;
+    }
+
+    .clase {
+        position: relative;
+        border-radius: 5px;
+        padding: 1rem;
+        margin: 3rem 0;
+        border: 1px solid white;
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+
+
+        .clase-info {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            
+            p {
+                color: rgb(255, 170, 247);
+
+                span {
+                    color: white;
+                }
+            }
+
+            p:nth-child(1) {
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+            p:nth-child(2) span {
+                display: block;
+            }
+
+            .clase-info-horario {
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+                p {
+                    margin: 0 3rem;
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                }
+
+                p span {
+                    white-space: pre-line;
+                }
+            }
+
+            .clase-info-precio {
+                position: absolute;
+                right: 2rem;
+                top: .5rem;
+                border-bottom: 1px solid rgba(255, 170, 247, 0.522);
+                margin: 0;
+            }
+
+            .clase-info-precio-disc {
+                color: lighten(rgb(255, 170, 247), 10);
+            }
+        }
+
+        .clase-imagenes {
+
+            display: flex;
+            gap: .5rem;
+
+            p {
+                text-align: center;
+                color: rgb(255, 170, 247);
+            }
+
+            .clase-imagen img {
+                height: 25rem;
+                object-fit: cover;
+                border-radius: 5px;
+                border: 1px solid rgba(255, 170, 247, 0.295);
+            }
+        }
+    }
 }
 
 .main-clases-body-quest {

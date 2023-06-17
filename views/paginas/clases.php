@@ -30,8 +30,52 @@
         
         <div class="main-clases-body-quest">
             <h2>¿Cómo puedes inscribirte en las clases?</h2>
-            <p>Puedes inscribirte tanto a clases particulares, como a las grupales, contactándome por <a href="#">WhatsApp</a>, <a href="#">Facebook</a>, o <a href="#">Instagram</a>.</p>
+            <p>Puedes inscribirte tanto a clases particulares, como a las grupales, contactándome por <a target="_blank" href="https://wa.me/34727767251">WhatsApp</a>, <a target="_blank" href="https://www.facebook.com/susanyanire35">Facebook</a>, o <a target="_blank" href="https://instagram.com/susanagutierrezfotografia">Instagram</a>.</p>
         </div>
 
+        <div>
+            <h2>Clases disponibles: </h2>
+
+            <div class="clases">
+                <?php foreach($clases as $clase) { ?>
+                    <div class="clase">
+                        <div class="clase-info">
+                            <p style="margin-top: 4.5rem;"> 
+                                Clase: <span><?php echo $clase['nombre'] ?></span>
+                            </p> 
+                            <p>
+                                Descripción de la clase: <span><?php echo $clase['descripcion'] ?> </span>
+                            </p>
+                            <p style="<?php if($clase['discounted'] == 1) { echo "right: 10rem; text-decoration: line-through; opacity: .5;";} ?>" class="clase-info-precio"><?php echo $clase['precio'] ?> €</p>
+                            <p class="clase-info-precio clase-info-precio-disc">
+                                <?php if($clase['discounted'] == 1) { echo $clase['discountedprecio'] . " €";} ?> 
+                            </p>
+
+                            <div class="clase-info-horario">
+                                <p>
+                                    Inicio: <span style="white-space: pre-line;"><?php $clase['fechaInicio'] = date("d-m-Y H:i:s", strtotime($clase['fechaInicio'])); echo str_replace(" ", "\n", $clase['fechaInicio']) ?></span>
+                                </p>
+                                <p>
+                                    Final: <span style="white-space: pre-line;"><?php $clase['fechaFinal'] = date("d-m-Y H:i:s", strtotime($clase['fechaFinal'])); echo str_replace(" ", "\n", $clase['fechaFinal']) ?></span>
+                                </p>
+                            </div>
+                        </div>
+
+    
+                        <div class="clase-imagenes">
+                            <div class="clase-imagen">
+                                <p>Antes</p>
+                                <img src="<?php echo $clase['fotoInicial'] ?>" alt="Foto del antes de la clase <?php echo $clase['nombre'] ?>">
+                            </div>
+                            <div class="clase-imagen">
+                                <p>Después</p>
+                                <img src="<?php echo $clase['fotoFinal'] ?>" alt="Foto del después de la clase <?php echo $clase['nombre'] ?>">
+                            </div>
+                        </div>
+    
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
     </div>
 </main>

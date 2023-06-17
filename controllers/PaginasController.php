@@ -5,6 +5,7 @@ namespace Controllers;
 use MVC\Router;
 use Model\Users;
 use Model\Galeria;
+use Model\Clases;
 
 
 class PaginasController {
@@ -54,8 +55,10 @@ class PaginasController {
 
     public static function clases(Router $router) {
 
-        $router->render('paginas/clases', [
+        $clases = Clases::getAll();
 
+        $router->render('paginas/clases', [
+            'clases'=>$clases
         ]);
     }
 

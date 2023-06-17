@@ -31,6 +31,12 @@ class ClasesController {
 
     }
 
+    public static function removeClase(Router $router) {
+
+        $id = $_GET['id'];
+        Clases::removeClase($id);
+    }
+
 }
 
 ?>
