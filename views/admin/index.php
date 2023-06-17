@@ -7,7 +7,7 @@
         <div class="main__admin-body-a">
 
             <a href="/admin/galeria">Galería</a>
-            <a href="#">Clases</a>
+            <a href="/admin/clases">Clases</a>
         </div>
     </div>
 </main>

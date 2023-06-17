@@ -5,6 +5,7 @@ use MVC\Router;
 use Controllers\PaginasController;
 use Controllers\AdminController;
 use Controllers\GaleriaController;
+use Controllers\ClasesController;
 
 $router = new Router;
 
@@ -31,5 +32,11 @@ $router->post('/admin/galeria/add', [GaleriaController::class, 'addGaleria']);
 $router->get('/admin/galeria/edit', [GaleriaController::class, 'editGaleria']);
 $router->post('/admin/galeria/edit', [GaleriaController::class, 'editGaleria']);
 $router->get('/admin/galeria/remove', [GaleriaController::class, 'removeGaleria']);
+
+/* Admin Clases */
+$router->get('/admin/clases', [ClasesController::class, 'index']);
+$router->get('/admin/clases/add', [ClasesController::class, 'addClase']);
+$router->post('/admin/clases/add', [ClasesController::class, 'addClase']);
+
 
 $router->comprobarRutas();

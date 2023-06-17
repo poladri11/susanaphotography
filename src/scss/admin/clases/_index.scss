@@ -1,0 +1,121 @@
+.admin-clases-index {
+    background-color: $bgMain;
+    flex: 1;
+    color: white;
+
+    .admin-clases-index-head {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: .5rem;
+            background-color: darken($bgMain, 10);
+        }
+
+    }
+
+    .clase {
+        width: 95%;
+        border: 1px solid rgba(255, 255, 255, 0.441);
+        border-radius: 5px;
+        margin: 3rem auto;
+
+        .clase-horario {
+            display: flex;
+            justify-content: space-around;
+            p {
+                font-size: 1.6rem;
+                white-space: pre-line;
+            }
+
+        }
+
+        .clase-info {
+            width: 90%;
+            margin: 0 auto;
+
+            p:nth-child(4) {
+                border: 1px solid rgba(255, 255, 255, 0.493);
+                border-radius: 5px;
+                padding: 1rem;
+            }
+        }
+
+        .clase-info-head {
+            width: 90%;
+
+            h2 {
+                margin: 0 auto;
+            }
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            a {
+                color: white;
+                border: 1px solid red;
+                padding: 0.35rem;
+                border-radius: 4px;
+                background-color: black;
+            }
+        }
+        
+        .clase-precio {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.337);
+            border-radius: 5px;
+            
+            p {
+                font-size: 1.6rem;
+                margin: 1rem auto;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .clase-imagenes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            .clase-imagen {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid rgba(213, 213, 213, 0.297);
+
+                img {
+                    max-width: 55rem;
+                }
+            }
+        }
+    }
+
+
+    @media screen and (min-width: 600px) {
+        
+        .clase {
+            width: 75%;
+        }
+
+        .clase-imagenes {
+            flex-direction: row !important;
+        }
+    }
+    
+    @media screen and (min-width: 900px) {
+        
+        .clase {
+            width: 60%;
+        }
+    }
+}

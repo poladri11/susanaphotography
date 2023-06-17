@@ -1,0 +1,130 @@
+.admin-clases-add {
+    background-color: $bgMain;
+    flex: 1;
+    color: white;
+
+    .admin-clases-add-head {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 8rem;
+
+        a {
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: .5rem;
+            background-color: darken($bgMain, 10);
+        }
+    }
+
+    form {
+        margin-bottom: 7rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    > * {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    fieldset {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+        border-color: rgba(150, 147, 150, 0.372);
+        margin: 2rem auto;
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            color: white;
+            width: 100%;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.208);
+            width: fit-content;
+            margin: 1rem auto;
+        }
+
+        input,
+        textarea {
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        textarea {
+            margin-top: 2rem;
+            padding: 1rem;
+            width: 100%;
+            border-radius: 10px;
+            background-color: transparent;
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+        }
+        
+
+        input[type=file] {
+            font-size: 1rem;
+        }
+
+        
+    }
+
+    input[type=date],
+    input[type=time] {
+        width: fit-content;
+
+        &::-webkit-calendar-picker-indicator {
+            filter: invert(100%);
+        }
+    }
+
+    input[type=submit] {
+        width: 25%;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: .45rem;
+        color: white;
+        background-color: darken($bgMain, 10);
+        place-self: center;
+    }
+
+    .dateClase {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: 600px) {
+        
+        form {
+            width: 75%;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        
+        form {
+            width: 60%;
+        }
+    }
+}
