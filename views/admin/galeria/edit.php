@@ -8,7 +8,7 @@
             <div class="main__edit-gal-head-imgPrin">
                 <h1>Imagen principal de la categoría:</h1>
                 <div class="main__edit-gal-head-name">
-                    <input class="main__edit-gal-head-input" readonly="readonly" type="text" name="nameCat" id="nameCat" value="<?php echo $galeriaDats['name'] ?>">
+                    <input class="main__edit-gal-head-input" readonly="readonly" type="text" name="nameCat" id="nameCat" value="<?php $name = str_replace("_"," ", ucfirst($galeriaDats['name'])); echo str_replace("C3B1", "ñ", $name); ?>">
                     <img class="main__edit-gal-head-img" src="/build/img/svgs/edit1.svg" alt="Icono de editar">
                 </div>
                 <div class="main__edit-gal-head-input">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="main__edit-gal-body">
-            <h2>Imagenes en la categoría: <?php echo $galeriaDats['name'] ?></h2>
+            <h2>Imagenes en la categoría: <?php $name = str_replace("_"," ", ucfirst($galeriaDats['name'])); echo str_replace("C3B1", "ñ", $name); ?></h2>
 
             <div class="main__edit-gal-body-field">
                 <label for="imgInCats">Añadir imágenes:</label>

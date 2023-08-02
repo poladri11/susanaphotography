@@ -9,10 +9,12 @@ class ClasesController {
 
     public static function index(Router $router) {
 
-        $clases = Clases::getAll();
+        $clasesGrabadas = Clases::getGrabadas();
+        $clasesGrupales = Clases::getGrupales();
 
         $router->render('admin/clases/index', [
-            'clases'=>$clases
+            'clasesGrabadas'=>$clasesGrabadas,
+            'clasesGrupales'=>$clasesGrupales
         ]);
 
     }

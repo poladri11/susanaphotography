@@ -43,7 +43,7 @@ class Users extends Config {
 
     public static function isAdmin($email) {
         $user = self::get($email);
-        if($user['admin'] === 1) {
+        if($user['admin'] == 1) {
             return true;
         } else {
             return false;

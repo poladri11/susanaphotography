@@ -17,7 +17,7 @@
     width: 90%;
     margin: 0 auto;
 
-    h2 {
+    h2, h3 {
         display: inline;
         padding-bottom: .5rem;
         border-bottom: 1px solid grey;
@@ -50,13 +50,23 @@
             text-align: center;
             flex: 1;
             display: flex;
+            position: relative;
             flex-direction: column;
-            
+
+            > img {
+                left: 1rem;
+                position: absolute;
+                top: 0.5rem;
+                width: 42px;
+                opacity: .5;
+            }
+
             p {
                 color: rgb(255, 170, 247);
 
                 span {
                     color: white;
+                    white-space: pre-line;
                 }
             }
 
@@ -72,19 +82,21 @@
 
             .clase-info-horario {
                 display: flex;
-                justify-content: space-between;
-                flex: 1;
+                justify-content: center;
                 p {
                     margin: 0 3rem;
                     display: flex;
                     gap: 1rem;
                     justify-content: flex-end;
-                    flex-direction: column;
                 }
 
                 p span {
                     white-space: pre-line;
                 }
+            }
+
+            .clase-info-desc {
+                flex: 1;
             }
 
             .clase-info-precio {
@@ -110,6 +122,9 @@
                 color: rgb(255, 170, 247);
             }
 
+            .clase-imagen {
+                flex: 1;
+            }
             .clase-imagen img {
                 height: 25rem;
                 object-fit: cover;
@@ -135,6 +150,10 @@
 
         h2 {
             font-size: 2.2rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
         }
 
         p, ul {

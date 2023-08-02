@@ -13,7 +13,7 @@
             foreach ($cats as $cat) { ?>
                 
                 <div class="main__admin-g-body-body-c">
-                    <h2><a href="/admin/galeria/edit?id=<?php echo $cat['id'];?>"><?php echo $cat['name']?></a></h2>
+                    <h2><a href="/admin/galeria/edit?id=<?php echo $cat['id'];?>"><?php $name = str_replace("_"," ", ucfirst($cat['name'])); echo str_replace("C3B1", "ñ", $name); ?></a></h2>
                     <a href="/admin/galeria/edit?id=<?php echo $cat['id'];?>">
                         <img src="<?php echo $cat['imagenPrinc']?>" alt="Foto de categoría <?php echo $cat['name']; ?>">
                     </a>

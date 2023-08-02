@@ -55,10 +55,12 @@ class PaginasController {
 
     public static function clases(Router $router) {
 
-        $clases = Clases::getAll();
+        $clasesGrupales = Clases::getGrupales();
+        $clasesGrabadas = Clases::getGrabadas();
 
         $router->render('paginas/clases', [
-            'clases'=>$clases
+            'clasesGrabadas'=>$clasesGrabadas,
+            'clasesGrupales'=>$clasesGrupales
         ]);
     }
 

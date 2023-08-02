@@ -1,6 +1,6 @@
 <main class="main-galeria-category">
     <div class="main-galeria-category-head">
-        <h1><?php echo $currentCat['name'] ?></h1>
+        <h1><?php $currentCat['name'] = str_replace("_"," ", ucfirst($currentCat['name'])); echo str_replace("C3B1", "ñ", $currentCat['name']); ?></h1>
         <a href="/galeria">Volver</a>    
     </div>
 

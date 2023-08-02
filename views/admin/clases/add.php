@@ -7,6 +7,11 @@
 
     <form method="post" enctype="multipart/form-data">
 
+        <select name="tipo" id="tipo">
+            <option value="0" selected disabled>-- Selecciona un tipo --</option>
+            <option value="0">Clase grupal</option>
+            <option value="1">Clase grabada</option>
+        </select>
         <fieldset>
             <legend>Información</legend>
 
@@ -17,7 +22,7 @@
     
             <div class="admin-clases-add-field">
                 <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" cols="30" rows="10" style="resize: none;" id="descripcion"></textarea>
+                <textarea required name="descripcion" cols="30" rows="10" style="resize: none;" id="descripcion"></textarea>
             </div>
         </fieldset>
 
@@ -31,7 +36,7 @@
             </div>
     
             <div class="admin-clases-add-field">
-                <label for="descontado">Descontado</label>
+                <label for="descontado">Precio descontado</label>
                 <input type="number" id="descontado" name="descontado">
             </div>
 
@@ -43,18 +48,18 @@
             
             <div class="admin-clases-add-field">
                 <label style="display: block;" for="imgAntes">Imagen del antes</label>
-                <input type="file" name="imgAntes" required id="imgAntes">
+                <input type="file" name="imgAntes" accept="image/jpg, image/jpeg, image/png" required id="imgAntes">
             </div>
             
             <div class="admin-clases-add-field">
                 <label style="display: block;" for="imgDespues">Imagen del después</label>
-                <input type="file" name="imgDespues" required id="imgDespues">
+                <input type="file" name="imgDespues" accept="image/jpg, image/jpeg, image/png" required id="imgDespues">
             </div>
   
 
         </fieldset>
 
-        <fieldset>
+        <fieldset id="fechasFieldset">
             <legend>Fechas</legend>
 
             
@@ -64,14 +69,6 @@
                 <div class="dateClase">
                     <input type="date" name="inicio" id="inicio">
                     <input type="time" name="inicioHora" id="inicioHora">
-                </div>
-            </div>
-            
-            <div style="display: flex; flex-direction: column; margin-bottom: 2rem;" class="admin-clases-add-field">
-                <label style="display: block;" for="imgDespues">Fecha de final de la clase</label>
-                <div class="dateClase">
-                    <input type="date" name="final" id="final">
-                    <input type="time" name="finalHora" id="finalHora">
                 </div>
             </div>
   

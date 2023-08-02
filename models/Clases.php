@@ -14,8 +14,8 @@ class Clases extends Config {
         $descripcion = $post['descripcion'];
         $precio = $post['precio'];
         $descuento = $post['descontado'];
-        $inicioFecha = $post['inicio'] . ' ' . $post['inicioHora'];
-        $finalFecha = $post['final'] . ' ' . $post['finalHora'];
+        if(empty($post['inicio'])) { $inicioFecha = "2000-01-01 00:00"; } else { $inicioFecha = $post['inicio'] . ' ' . $post['inicioHora']; } 
+        $grabado = intval($post['tipo']);
 
         if(!empty($descuento)) {
             $isDiscounted = 1;
@@ -28,14 +28,30 @@ class Clases extends Config {
         $pathToDespues = '/' .  $imagesData[0] . '/' . $imagesData[2] . '.webp';
 
         
-        $query = "INSERT INTO clasesdisponibles (precio, discountedprecio, discounted, nombre, descripcion, fotoInicial, fotoFinal, fechaInicio, fechaFinal) VALUES ($precio, $descuento, $isDiscounted, '$nombre', '$descripcion', '$pathToAntes', '$pathToDespues', '$inicioFecha', '$finalFecha')";
+        $query = "INSERT INTO clasesdisponibles (precio, discountedprecio, discounted, nombre, descripcion, fotoInicial, fotoFinal, fechaInicio, grabada) VALUES ($precio, $descuento, $isDiscounted, '$nombre', '$descripcion', '$pathToAntes', '$pathToDespues', '$inicioFecha', $grabado)";
         
         $response = self::queryDB($query);
 
     }
 
     public static function getAll() {
-        $query = "SELECT * FROM clasesdisponibles";
+        $query = "SELECT id, precio, discountedprecio, discounted, nombre, descripcion, fotoInicial, fotoFinal, DATE_FORMAT(fechaInicio, '%d/%m/%Y - %k:%i') as fechaInicio FROM clasesdisponibles";
+
+        $response = self::queryDB($query, true);
+
+        return $response;
+    }
+
+    public static function getGrabadas() {
+        $query = "SELECT id, precio, discountedprecio, discounted, nombre, descripcion, fotoInicial, fotoFinal FROM clasesdisponibles WHERE grabada = 1";
+
+        $response = self::queryDB($query, true);
+
+        return $response;
+    }
+
+    public static function getGrupales() {
+        $query = "SELECT id, precio, discountedprecio, discounted, nombre, descripcion, fotoInicial, fotoFinal, DATE_FORMAT(fechaInicio, '%d/%m/%Y - %k:%i') as fechaInicio FROM clasesdisponibles WHERE grabada = 0";
 
         $response = self::queryDB($query, true);
 

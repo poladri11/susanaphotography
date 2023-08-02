@@ -20,11 +20,32 @@
 
     }
 
+    .admin-clases-index-body {
+        width: 90%;
+        margin: 0 auto;
+
+        .admin-clases-index-body-clases {
+            display: flex;
+            flex-direction: column;
+
+            .clases {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+            }
+        }
+    }
+
     .clase {
         width: 95%;
         border: 1px solid rgba(255, 255, 255, 0.441);
         border-radius: 5px;
         margin: 3rem auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 40rem;
 
         .clase-horario {
             display: flex;
@@ -32,6 +53,10 @@
             p {
                 font-size: 1.6rem;
                 white-space: pre-line;
+
+                span {
+                    color: #8eff8e;
+                }
             }
 
         }
@@ -39,32 +64,52 @@
         .clase-info {
             width: 90%;
             margin: 0 auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
 
-            p:nth-child(4) {
-                border: 1px solid rgba(255, 255, 255, 0.493);
-                border-radius: 5px;
-                padding: 1rem;
-            }
         }
 
         .clase-info-head {
             width: 90%;
-
-            h2 {
-                margin: 0 auto;
-            }
-            margin: 0 auto;
+            margin: 4.5rem auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            > img {
+                left: 1rem;
+                position: absolute;
+                top: 0.5rem;
+                width: 42px;
+                opacity: .5;
+            }
+
+            h2 {
+                margin: 0 auto;
+                font-size: 1.7rem;
+            }
             
             a {
-                color: white;
-                border: 1px solid red;
-                padding: 0.35rem;
-                border-radius: 4px;
-                background-color: black;
+                border-radius: 13px;
+                border: 1px solid #ffffff73;
+                position: absolute;
+                right: 1rem;
+                top: 0.5rem;
+
+                img {
+                    width: 32px;
+                }
             }
+        }
+
+        .clase-info-icon {
+            position: absolute;
+            width: 48px;
+            left: 1rem;
+            top: .5rem;
         }
         
         .clase-precio {
@@ -81,9 +126,18 @@
                 justify-content: space-between;
             }
         }
+
+        .clase-info-desc {
+            border: 1px solid rgba(255, 255, 255, 0.493);
+            border-radius: 5px;
+            padding: 1rem;
+            white-space: pre-line;
+            flex: 1;
+            text-align: center;
+        }
+
         .clase-imagenes {
             display: flex;
-            flex-direction: column;
             justify-content: space-around;
 
 
@@ -92,8 +146,13 @@
                 flex-direction: column;
                 align-items: center;
                 border: 1px solid rgba(213, 213, 213, 0.297);
+                padding: 1rem;
 
                 img {
+                    border: 1px solid hsl(313.48deg 100% 54.05% / 36%);
+                    border-radius: 2.5px;
+                    height: 100%;
+                    object-fit: cover;
                     max-width: 55rem;
                 }
             }
